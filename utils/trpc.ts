@@ -6,8 +6,15 @@ import superjson from 'superjson'
 export const trpc = createTRPCReact<AppRouter>()
 
 export function getBaseUrl() {
+  // ✅ Browser
   if (typeof window !== 'undefined') return ''
-  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`
+
+  // ✅ Netlify production
+  if (process.env.URL) {
+    return process.env.URL
+  }
+
+  // ✅ Local development
   return `http://localhost:${process.env.PORT ?? 3000}`
 }
 
