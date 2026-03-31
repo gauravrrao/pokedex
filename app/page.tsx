@@ -1,5 +1,5 @@
 "use client"
-import { Container, Typography, Box, Card, CardContent, Grid, Button } from '@mui/material'
+import { Container, Typography, Box, Card, CardContent, Button, Grid } from '@mui/material'
 import Link from 'next/link'
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
       </Box>
 
       <Grid container spacing={4}>
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flexGrow: 1 }}>
               <Typography variant="h4" component="h2" gutterBottom>
@@ -37,7 +37,7 @@ export default function Home() {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flexGrow: 1 }}>
               <Typography variant="h4" component="h2" gutterBottom>
@@ -59,7 +59,7 @@ export default function Home() {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flexGrow: 1 }}>
               <Typography variant="h4" component="h2" gutterBottom>

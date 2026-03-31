@@ -2,6 +2,7 @@
 
 import { Box } from '@mui/material'
 import { keyframes } from '@mui/system'
+import { useEffect, useState } from 'react'
 
 const float = keyframes`
   0% {
@@ -31,13 +32,24 @@ const pulse = keyframes`
 `
 
 export default function AnimatedBackground() {
-  const pokeballs = Array.from({ length: 20 }, (_, i) => ({
-    id: i,
-    size: Math.random() * 100 + 50,
-    left: Math.random() * 100,
-    animationDuration: Math.random() * 20 + 10,
-    animationDelay: Math.random() * 5,
-  }))
+  const [pokeballs, setPokeballs] = useState<Array<{
+    id: number
+    size: number
+    left: number
+    animationDuration: number
+    animationDelay: number
+  }>>([])
+
+  useEffect(() => {
+    const balls = Array.from({ length: 20 }, (_, i) => ({
+      id: i,
+      size: Math.random() * 100 + 50,
+      left: Math.random() * 100,
+      animationDuration: Math.random() * 20 + 10,
+      animationDelay: Math.random() * 5,
+    }))
+    setPokeballs(balls)
+  }, [])
 
   return (
     <Box
