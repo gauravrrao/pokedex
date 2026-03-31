@@ -48,7 +48,7 @@ export default function Part2Page() {
             variant="outlined"
             value={pokemonNames}
             onChange={(e) => setPokemonNames(e.target.value)}
-            placeholder="e.g., Bulbasaur, Charmander, Squirtle"
+            placeholder="e.g., bulbasaur, charmander, squirtle"
             multiline
             rows={2}
           />

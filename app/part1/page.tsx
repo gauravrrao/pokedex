@@ -83,7 +83,7 @@ export default function Part1Page() {
             value={pokemonName}
             onChange={(e) => setPokemonName(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
-            placeholder="Enter Pokémon name (e.g., Bulbasaur, Pikachu, Charizard)"
+            placeholder="Enter Pokémon name (e.g., bulbasaur, pikachu, charizard)"
             sx={{
               '& .MuiOutlinedInput-root': {
                 fontSize: '1.1rem',
