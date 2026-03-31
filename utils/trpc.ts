@@ -10,8 +10,8 @@ export function getBaseUrl() {
   if (typeof window !== 'undefined') return ''
 
   // ✅ Netlify production
-  if (process.env.URL) {
-    return process.env.URL
+  if (process.env.DEV_URL) {
+    return process.env.DEV_URL
   }
 
   // ✅ Local development
